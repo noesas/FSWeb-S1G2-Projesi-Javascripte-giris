@@ -19,9 +19,13 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+let surucuYasi = 45
+if (surucuYasi > 18) {
+
+}
 
 
-
+console.log (false)
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
 
@@ -34,7 +38,12 @@ Aşağıdakileri yapınız:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
-
+let birinciDeger = 55;
+let ikinciDeger = 45;
+if (birinciDeger > ikinciDeger){
+  birinciDeger = Math.random();
+  console.log(birinciDeger);
+}
 
 
 
@@ -48,6 +57,9 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
+const stringSayi = "1999" ;
+const numberSayi = Number(stringSayi)
+console.log(numberSayi);
 
 
 
@@ -61,10 +73,10 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamlayın:
    3. console.log(carpma(7,4)) ile yazdığınız fonsiyonu test edin. Console'da sonucu 28 olarak görmelisiniz.
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a, b) {
+  return a * b;
 }
-
+console.log (carpma(7, 4) )
 
 
 
