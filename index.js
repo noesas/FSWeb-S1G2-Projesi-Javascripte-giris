@@ -89,9 +89,16 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
+function kopeginYasi(yas){
   /*buraya kodunu yazabilirsin*/
+  yas = yas*7;
+  console.log("köpek yaşı:",yas);
+  return yas
 }
+
+kopeginYasi(2);
+
+
 
 
 
@@ -111,6 +118,26 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 
 function oyun(oyuncu, bilgisayar){
   /*buraya kodunu yazabilirsin*/
+  switch (oyuncu){
+    case "taş":
+      return bilgisayar ==="Makas"
+      ? "kazandın!"
+      : bilgisayar  === "Kağıt"
+      ? "Kaybettin!"
+      : "Beraberlik"
+      case "Kağıt":
+        return bilgisayar ==="Makas"
+      ? "kaybettin!"
+      : bilgisayar  === "Kağıt"
+      ? "Beraberlik!"
+      : "Kazandın";
+      case "Makas" :
+       return bilgisayar ==="Makas"
+      ? "Beraberlik"
+      : bilgisayar  === "Kağıt"
+      ? "Kazandın!"
+      : "Kaybettik";
+  }
 }
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
@@ -128,7 +155,16 @@ function oyun(oyuncu, bilgisayar){
 Şimdi kendi seçtiğiniz bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığınız oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
-
+function bilgisayarinSecimi() {
+   let yasinRandomSayisi = Math.random()*3;
+  if(yasinRandomSayisi < 1) {
+    return "Taş"
+} else if (yasinRandomSayisi < 2){
+  return "Makas";
+}else {
+  return "Kağıt";
+}
+}
 /* Görev 4 : Metrik Dönüştürücü */
 
 //Görev 4a - Kilometreden Mil
@@ -139,8 +175,9 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamlayın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
+function milDonusturucu(km){
   /*buraya kodunu yazabilirsin*/
+  return km*1,621371;
 }
 
 
@@ -155,9 +192,13 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
+function feetDonusturucu(cm){
   /*buraya kodunu yazabilirsin*/
+return cm / 30,48;
 }
+
+
+
 
 
 
